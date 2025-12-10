@@ -9,3 +9,10 @@
 </ul>    
 
 <%= button_to "Delete Project" ,project_path(@project),method: :delete%>
+<h2>Comments : </h2>
+<%=render @project.comments%>
+
+<h2>Add a comment</h2>
+<%= render "comments/form" ,project: @project%>
+
+ 

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root "projects#index"
   resources :todos
-  resources :projects
+  resources :projects do
+    resources :comments
+  end
   # get "/projects",  to:"projects#index"
   # get "/projects/new", to:"projects#new", as:"new_project"
   # get "/projects/:id", to:"projects#show", as:"project"
